@@ -12,11 +12,27 @@
 /* ============================= */
 body {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background-color: #f8fafc;
+  background: #f8fafc;
   color: #111827;
   font-size: 16px;
   line-height: 1.6;
-  font-weight: 400;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page {
+  flex: 1;
+  padding: 3rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 /* ============================= */
@@ -24,8 +40,11 @@ body {
 /* ============================= */
 .navbar {
   background: #ffffff;
-  padding: 1rem 0;
   border-bottom: 1px solid #e5e7eb;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .navbar-container {
@@ -40,22 +59,28 @@ body {
 .navbar-brand {
   font-size: 1.6rem;
   font-weight: 700;
-  letter-spacing: -0.3px;
+  text-decoration: none;
+  color: #111827;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 2rem;
 }
 
 .navbar-link {
   font-size: 0.95rem;
   font-weight: 500;
+  text-decoration: none;
   color: #374151;
 }
 
-.navbar-auth .btn {
-  font-size: 0.9rem;
-  padding: 0.6rem 1.4rem;
+.navbar-link:hover {
+  color: #2563eb;
 }
 
 /* ============================= */
-/* HERO SECTION */
+/* HERO */
 /* ============================= */
 .home-hero {
   text-align: center;
@@ -63,53 +88,115 @@ body {
 }
 
 .home-title {
-  font-size: 2.8rem;      /* reduced from huge */
-  font-weight: 700;       /* less heavy than 800 */
-  letter-spacing: -0.5px;
+  font-size: 2.8rem;
+  font-weight: 700;
   margin-bottom: 1rem;
 }
 
 .home-subtitle {
   font-size: 1.1rem;
-  font-weight: 400;
   color: #6b7280;
 }
 
 /* ============================= */
-/* PRODUCT CARDS */
+/* PRODUCT GRID */
 /* ============================= */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.product-card {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  transition: 0.25s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.product-card-content {
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
 .product-card-name {
   font-size: 1.05rem;
   font-weight: 600;
-  margin-bottom: 0.4rem;
 }
 
 .product-card-price {
   font-size: 1.25rem;
   font-weight: 700;
   color: #2563eb;
-  margin-bottom: 1rem;
+}
+
+.product-card-actions {
+  display: flex;
+  gap: 0.8rem;
 }
 
 .product-card-actions .btn {
-  font-size: 0.9rem;
-  padding: 0.6rem 1rem;
+  flex: 1;
 }
 
 /* ============================= */
 /* PRODUCT DETAIL */
 /* ============================= */
+.product-detail {
+  max-width: 1100px;
+  margin: 3rem auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.06);
+}
+
+.product-detail-image {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.product-detail-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.product-detail-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
 .product-detail-name {
   font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 1rem;
 }
 
 .product-detail-price {
   font-size: 1.6rem;
   font-weight: 700;
   color: #2563eb;
-  margin-bottom: 1rem;
 }
 
 .product-detail-description {
@@ -121,8 +208,12 @@ body {
 /* BUTTONS */
 /* ============================= */
 .btn {
+  padding: 0.6rem 1rem;
   border-radius: 6px;
+  font-size: 0.9rem;
   font-weight: 600;
+  border: none;
+  cursor: pointer;
   transition: 0.2s ease;
 }
 
@@ -131,9 +222,17 @@ body {
   color: white;
 }
 
+.btn-primary:hover {
+  background: #1e40af;
+}
+
 .btn-secondary {
   background: #6b7280;
   color: white;
+}
+
+.btn-secondary:hover {
+  background: #4b5563;
 }
 
 /* ============================= */
@@ -146,5 +245,9 @@ body {
 
   .product-detail {
     grid-template-columns: 1fr;
+  }
+
+  .product-detail-image img {
+    height: 300px;
   }
 }
