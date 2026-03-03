@@ -19,11 +19,11 @@ export default function ProductCard({ product }) {
         <h3 className="product-card-name">{product.name}</h3>
         <p className="product-card-price">${product.price}</p>
         <div className="product-card-actions">
-          <Link className="btn btn-secondary" to={`/products/${product.id}`}>
+          <Link style={{border:"2px solid black",paddingTop:10,paddingLeft:5,paddingRight:5,fontSize:16,textDecoration:"none",color:"white",borderRadius:5,backgroundColor:"blue"}} to={`/products/${product.id}`}>
             View Details
           </Link>
           <button
-            className="btn btn-primary"
+            style={{paddingTop:10,paddingLeft:5,paddingRight:5,fontSize:16,textDecoration:"none",color:"white",borderRadius:5,backgroundColor:"blue"}}
             onClick={() => addToCart(product.id)}
           >
             Add to Cart {productQuantityLabel}

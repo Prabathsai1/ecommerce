@@ -10,27 +10,27 @@ export default function Navbar() {
           ShopHub
         </Link>
         <div className="navbar-links">
-          <Link to="/" className="navbar-link">
+          <Link to="/"style={{padding:5,fontSize:16,textDecoration:"none",color:"black"}}>
             Home
           </Link>
-          <Link to="/checkout" className="navbar-link">
+          <Link to="/checkout" style={{padding:5,fontSize:16,textDecoration:"none",color:"black"}}>
             Cart
           </Link>
         </div>
         <div className="navbar-auth">
           {!user ? (
             <div className="navbar-auth-links">
-              <Link to="/auth" className="btn btn-secondary">
+              <Link to="/auth" style={{padding:5,fontSize:15,textDecoration:"none",color:"black"}}>
                 Login
               </Link>
-              <Link to="/auth" className="btn btn-primary">
+              <Link to="/auth" style={{padding:5,fontSize:15,textDecoration:"none",color:"black"}}>
                 Signup
               </Link>
             </div>
           ) : (
             <div className="navbar-user">
               <span className="navbar-greeting">Hello, {user.email}</span>
-              <button className="btn btn-secondary" onClick={logout}>
+              <button style={{padding:5,fontSize:12}} onClick={logout}>
                 Logout
               </button>
             </div>

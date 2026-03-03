@@ -42,7 +42,7 @@ body {
 }
 
 .navbar-brand {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: bold;
   color: #333;
   text-decoration: none;
@@ -79,7 +79,7 @@ body {
 
 .navbar-greeting {
   color: #666;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
 }
 
 .navbar-auth-links {
@@ -99,7 +99,7 @@ body {
 }
 
 .page-title {
-  font-size: 2rem;
+  font-size: 1rem;
   margin-bottom: 2rem;
   color: #333;
 }
@@ -154,13 +154,13 @@ body {
 }
 
 .product-card-name {
-  font-size: 1.25rem;
+  font-size: 0.6rem;
   margin-bottom: 0.5rem;
   color: #333;
 }
 
 .product-card-price {
-  font-size: 1.5rem;
+  font-size: 0.6rem;
   font-weight: bold;
   color: #007bff;
   margin-bottom: 1rem;
