@@ -113,9 +113,9 @@ export default function Auth() {
 
           <div className="auth-switch">
             {mode === "signup" ? (
-              <p>
+              <p style={{fontSize:12}}>
                 Already have an account?{" "}
-                <span
+                <span style={{fontSize:12}}
                   className="auth-link"
                   onClick={() => setMode("login")}
                 >
@@ -123,9 +123,9 @@ export default function Auth() {
                 </span>
               </p>
             ) : (
-              <p>
+              <p style={{fontSize:12}}>
                 Don't have an account?{" "}
-                <span
+                <span style={{fontSize:12}}
                   className="auth-link"
                   onClick={() => setMode("signup")}
                 >
