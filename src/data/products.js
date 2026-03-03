@@ -76,7 +76,7 @@ const products = [
     name: "Bluetooth Speaker",
     price: 59.99,
     image:
-      "https://images.unsplash.com/photo-1518441902110-67c1f7f98e9e?w=500&h=500&fit=crop",
+      "https://m.media-amazon.com/images/I/919qy1LWULL.jpg",
     description:
       "Portable Bluetooth speaker with deep bass and 12-hour battery life. Perfect for indoor and outdoor use.",
   },
